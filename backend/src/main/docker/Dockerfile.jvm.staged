@@ -23,7 +23,7 @@ USER root
 WORKDIR /build
 RUN mkdir -p .mvn/wrapper
 # Build dependency offline to streamline build
-COPY mvnw* .
+COPY mvnw .
 COPY .mvn/wrapper .mvn/wrapper
 COPY pom.xml .
 RUN ./mvnw dependency:go-offline
